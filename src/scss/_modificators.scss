@@ -15,7 +15,26 @@
 .m-favorites {
   color: rgb(96, 238, 205);
   p {
-    color:#6081ee;
+    color: #6081ee;
   }
 }
 
+.m-text-head {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 29px;
+}
+
+.m-text-menu{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+
+.m-desc-full-btn{
+  cursor: pointer;
+  color: red;
+}

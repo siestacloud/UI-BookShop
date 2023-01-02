@@ -1,5 +1,56 @@
 // <ШАПКА САЙТА>
 .header {
   grid-area: header;
-}
+  display: grid;
+  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 1062px) minmax(15px, 1fr);
+  &__row {
+    grid-area: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item {
+    a{
+      color: $dark;
+    }
+    /* полоски */
+    a::after {
+      content: "";
+      width: 0%;
+      display: block;
+      background-color: $dark;
+      height: 2px;
+      transition: all 0.3s ease;
+    }
 
+    /* полоски после наведения*/
+    & a:hover::after {
+      color: $dark;
+      width: 100%;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+  }
+
+  &__counter {
+    font-size: 12px;
+    position: absolute;
+    right: -7px;
+    bottom: -9px;
+    background-color: rgb(252, 79, 79);
+    padding: 2px 4px;
+    border-radius: 50%;
+  }
+}

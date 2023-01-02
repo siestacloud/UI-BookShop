@@ -4,8 +4,225 @@
 .main {
   grid-area: main;
   display: grid;
-  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 1652px) minmax(15px, 1fr);
-  &__item {
+  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 1162px) minmax(15px, 1fr);
+  gap: 80px;
+  &__wrapper {
     grid-area: 1/2;
   }
 }
+
+.slider {
+  position: relative;
+  &__images {
+    height: 700px;
+  }
+
+  &__images .image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 720px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 800ms ease;
+  }
+
+  &__images .image.active {
+    opacity: 1;
+  }
+
+  &__dots {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+    color: $dark;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: 120px;
+    height: 180px;
+    background-color: $ping-blue;
+    padding: 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  &__link-sec {
+    color: $dark;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 29px;
+    text-transform: uppercase;
+    position: absolute;
+    right: -100px;
+    top: 280px;
+
+    width: 137px;
+    height: 273px;
+    background-color: $ping;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+.books {
+  margin-top: 80px;
+  // .books__menu
+  &__menu {
+    height: 700px;
+    width: 400px;
+    background-color: #efeef6;
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    // text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  &__category {
+    cursor: pointer;
+    padding: 5px 0px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    &:hover{
+      color: #ccc;
+    }
+    color: $grey;
+    &.active-cat{
+      color: $ping;
+    }
+  }
+  // .books__row
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex-direction: row;
+
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  // .books__item
+  &__item {
+  }
+}
+
+.item {
+  padding-top: 30px;
+  display: flex;
+  // align-items: ;
+  align-items: center;
+  gap: 30px;
+  &__img_big {
+    width: 200px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+
+  &__column {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+  }
+  // .item__autor
+  &__autor {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    color: $grey;
+  }
+
+  // .item__title
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark;
+  }
+
+  // .item__stars
+
+  &__stars {
+    display: flex;
+    gap: 10px;
+  }
+
+  // .item__desc
+
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    color: $grey;
+  }
+
+  // .item__price
+
+  &__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 14px;
+    color: $dark;
+  }
+
+  // .item__btn
+
+  &__btn {
+    padding: 10px 15px;
+    border: 1px solid $ping-blue;
+    background-color: transparent;
+  }
+}
+.star {
+}
+.review {
+}
+
+
+
+.j-dots-item {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+  
+.j-dots-item:hover, .j-dots-item.active {
+  background: #c373e3;;
+}
+

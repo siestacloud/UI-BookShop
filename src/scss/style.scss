@@ -1,16 +1,10 @@
 // <ШРИФТЫ>
 
 // <Подключаем шрифты>
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-// font-family: 'Russo One', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
 // <Шрифт по умолчанию>
-$fontfamily: sans-serif;
-
-// $titlefamily: "Russo One", sans-serif;
-// font-family: 'Comfortaa', cursive;
-
-// </Шрифт по умолчанию>
+$fontfamily: 'Jost', sans-serif;
 
 // </ШРИФТЫ>
 
@@ -18,8 +12,10 @@ $fontfamily: sans-serif;
 $minWidth: 320px;
 $light: #f0f8ff;
 $dark: #161b23;
-$grey: #B0B0B0;
-
+$grey: #5c6a79;
+$fio: #efeef6;
+$ping-blue: #9e98dc;
+$ping: #ff8fe6;
 // </ПЕРЕМЕННЫЕ>
 
 // <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
@@ -64,7 +60,5 @@ $grey: #B0B0B0;
 @import "comments/_new";
 @import "comments/_sort";
 @import "modificators";
-
-
 
 // </ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
