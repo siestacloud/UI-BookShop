@@ -17,6 +17,7 @@ class Controllers {
     this.privateView.DisplayMain(); //* отображение  (подключение функционала)
     this.selectCategories()
     this.privateView.DisplayCounter()
+    this.lazyLoadEvent()
 
   }
 
@@ -25,7 +26,7 @@ class Controllers {
     let categories = document.querySelectorAll<HTMLElement>('.books__category')
     let books = await this.privateModels.Get('Architecture')
 
-    this.privateView.DisplayBooks(books)
+    this.privateView.DisplayBooks(books, true)
     this.selectBookEvent(books)
 
 
@@ -34,15 +35,13 @@ class Controllers {
         if (!category.dataset.index) { return }
         this.privateView.DisplayMovingCategories(+category.dataset.index)
         let books = await this.privateModels.Get(category.innerText)
-        this.privateView.DisplayBooks(books)
+        this.privateView.DisplayBooks(books, true)
       })
     })
   }
 
 
   private selectBookEvent(books: Book[]) {
-
-
 
     // const selectBook: HTMLElement | null = document.querySelector(`.j-${book.GetPrivateID()}-btn`);
     let bookSelectBtns = document.querySelectorAll<HTMLElement>('.item__btn')
@@ -60,10 +59,20 @@ class Controllers {
       });
     })
 
-
-
   }
 
+
+  private async lazyLoadEvent() {
+    let lazyLoadBtn = document.querySelector<HTMLElement>('.footer__btn')
+    if (!lazyLoadBtn) { return }
+
+    lazyLoadBtn.addEventListener('click', async () => {
+      let books = await this.privateModels.Get('Architecture')
+      this.privateView.DisplayBooks(books, false)
+      this.selectBookEvent(books)
+    })
+
+  }
 
 
 }

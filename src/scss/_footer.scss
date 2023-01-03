@@ -2,5 +2,19 @@
 
 .footer {
   grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // background-color: ;
+
+  &__btn {
+    padding: 10px 15px;
+    border: 1px solid $ping-blue;
+    background-color: transparent;
+    &:hover{
+      background-color: #d997f3b4 ;
+
+    }
+  }
+
 }

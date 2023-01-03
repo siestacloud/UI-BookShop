@@ -23,11 +23,13 @@ class Views extends Events {
   }
 
 
-  public DisplayBooks(books: Book[]) {
+  public DisplayBooks(books: Book[], clear: boolean) {
 
     const booksHTMLRoot: HTMLElement | null = document.querySelector('.books__row');
     if (!booksHTMLRoot) { return }
-    booksHTMLRoot.innerText = ''
+    
+    clear ? booksHTMLRoot.innerText = '': console.log();
+     
     books.forEach(book => {
 
       console.log("===================   book");
