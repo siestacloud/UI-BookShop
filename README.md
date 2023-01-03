@@ -22,7 +22,7 @@
 </p>
 
 
-# CommentsJS
+# BookShopTS
 
 ## Table of Contents
 
