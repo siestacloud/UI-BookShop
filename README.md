@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="" rel="noopener">
- <img width=850px height=700px src="./img/com.png" alt="Project logo"></a>
+ <img width=850px height=700px src="./src/dist/img/3.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">BookShopTS</h3>
