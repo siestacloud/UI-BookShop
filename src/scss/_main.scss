@@ -202,6 +202,10 @@
     padding: 10px 15px;
     border: 1px solid $ping-blue;
     background-color: transparent;
+    &:hover{
+      background-color: #d997f3b4 ;
+
+    }
   }
 }
 .star {
@@ -223,6 +227,6 @@
 
   
 .j-dots-item:hover, .j-dots-item.active {
-  background: #c373e3;;
+  background: #c373e3;
 }
 

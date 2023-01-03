@@ -8,9 +8,7 @@ class Views extends Events {
   }
   DisplayMain(): void {
     console.log('@view');
-
     this.InitSliderBlink("j-slider-img", "j-dots", 'active')
-
   }
 
 
@@ -30,10 +28,6 @@ class Views extends Events {
     const booksHTMLRoot: HTMLElement | null = document.querySelector('.books__row');
     if (!booksHTMLRoot) { return }
     booksHTMLRoot.innerText = ''
-
-    console.log(books);
-
-    console.log(books.length);
     books.forEach(book => {
 
       console.log("===================   book");
@@ -54,12 +48,10 @@ class Views extends Events {
         <div class="item__desc j-${book.GetPrivateID()}-desc">  <p class="desc__text"> ${book.GetPrivateFullDescription() && book.GetPrivateFullDescription().length > 35 ? ((): string => { return book.GetPrivateSmallDescription() })() : ((): string => { return book.GetPrivateFullDescription() })()}</p></div>
         <div class="item__price">${book.GetPrivatePrice()}   ${book.GetPrivateCode()}</div>
 
-        <button class="item__btn">buy now</button>
+        <button class="item__btn  .j-${book.GetPrivateID()}-btn">buy now</button>
       </div>
     </div>
     `;
-      // booksHTMLRoot.innerHTML += displayBook
-      // booksHTMLRoot.insertAdjacentText('beforeEnd', displayBook)  
       booksHTMLRoot.insertAdjacentHTML('beforeend', displayBook);
       const selectBook: HTMLElement | null = document.querySelector(`.j-${book.GetPrivateID()}-desc-btn`);
       if (!selectBook) { return }
@@ -73,30 +65,14 @@ class Views extends Events {
       })
 
     });
-    // let booksFullDescHTMLBtn = document.querySelectorAll<HTMLElement>('.j-full-desc')
-
-
-
-    console.log("===================   END`");
-
-
   }
 
 
-  private showStars(book: Book) {
-    
-
-    // emptyStar = 5 - book.GetPrivateAverageRating.length 
-
-
-    
-    return 
-    // book.GetPrivateFullDescription()
-
-
-
-
-
+  public DisplayCounter() {
+    let counter = <string>localStorage.getItem("counter")
+    const counterHTML: HTMLElement | null = document.querySelector(`.header__counter`);
+    if (!counterHTML) { return }
+    counterHTML.innerText = `${counter}`
   }
 
 

@@ -16,35 +16,54 @@ class Controllers {
   public PageMain(): void {
     this.privateView.DisplayMain(); //* отображение  (подключение функционала)
     this.selectCategories()
+    this.privateView.DisplayCounter()
+
   }
 
   //* логика получения - обработки - отображения - выбранной категории пользователем
   private async selectCategories() {
     let categories = document.querySelectorAll<HTMLElement>('.books__category')
-
     let books = await this.privateModels.Get('Architecture')
-    this.privateView.DisplayBooks(books)
-    
 
-    
-    
-    
+    this.privateView.DisplayBooks(books)
+    this.selectBookEvent(books)
+
+
     categories.forEach(category => {
       category.addEventListener("click", async () => {
         if (!category.dataset.index) { return }
         this.privateView.DisplayMovingCategories(+category.dataset.index)
         let books = await this.privateModels.Get(category.innerText)
         this.privateView.DisplayBooks(books)
-
       })
-    
-    
     })
   }
 
 
+  private selectBookEvent(books: Book[]) {
 
-  
+
+
+    // const selectBook: HTMLElement | null = document.querySelector(`.j-${book.GetPrivateID()}-btn`);
+    let bookSelectBtns = document.querySelectorAll<HTMLElement>('.item__btn')
+
+    if (!bookSelectBtns) { return }
+
+    bookSelectBtns.forEach(bookSelectBtn => {
+      bookSelectBtn.addEventListener('click', () => {
+        let counter = <string>localStorage.getItem("counter")
+        let newCounter = +counter + 1
+        console.log("newCounter  ", newCounter);
+
+        localStorage.setItem("counter", JSON.stringify(newCounter))
+        this.privateView.DisplayCounter()
+      });
+    })
+
+
+
+  }
+
 
 
 }
