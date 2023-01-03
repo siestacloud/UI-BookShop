@@ -27,9 +27,9 @@ class Views extends Events {
 
     const booksHTMLRoot: HTMLElement | null = document.querySelector('.books__row');
     if (!booksHTMLRoot) { return }
-    
-    clear ? booksHTMLRoot.innerText = '': console.log();
-     
+
+    clear ? booksHTMLRoot.innerText = '' : console.log();
+
     books.forEach(book => {
 
       console.log("===================   book");
@@ -74,7 +74,10 @@ class Views extends Events {
     let counter = <string>localStorage.getItem("counter")
     const counterHTML: HTMLElement | null = document.querySelector(`.header__counter`);
     if (!counterHTML) { return }
-    counterHTML.innerText = `${counter}`
+    if (!counter) {
+      counter = '0'
+    }
+    counterHTML.innerText = counter
   }
 
 

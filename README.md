@@ -4,7 +4,7 @@
  <img width=850px height=700px src="./img/com.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">commentJS</h3>
+<h3 align="center">BookShopTS</h3>
 
 <div align="center">
 
@@ -17,7 +17,7 @@
 
 ---
 
-<p align="center"> Фронтенд-часть для модуля системы комментариев
+<p align="center"> Фронтенд-часть для магазина книг
     <br> 
 </p>
 
@@ -31,7 +31,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Фронтенд-часть для модуля системы комментариев
+Фронтенд-часть для магазина книг
 
 ## 🔧 Getting Started <a name = "getting_started"></a>
 
@@ -39,10 +39,10 @@
 
 ###  Installing
 ```
-git clone  https://github.com/siestacloud/commentJS.git
-cd commentJS/ 
+git clone  https://github.com/siestacloud/commentJS.git 
+
 npm i
 npm run build
-yarn run start
+npm run start:dev
 ```
 ---
