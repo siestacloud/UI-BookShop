@@ -38,7 +38,7 @@
 
 ###  Installing
 ```
-git clone  https://github.com/siestacloud/commentJS.git 
+git clone  https://github.com/siestacloud/BookShopTS 
 
 npm i
 npm run build
