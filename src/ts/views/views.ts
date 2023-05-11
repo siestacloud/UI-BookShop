@@ -37,7 +37,7 @@ class Views extends Events {
       const displayBook = `
       
       <div class="books__item item ${book.GetPrivateID()}">
-      <img src="${book.GetPrivateImageLink()}" class="item__img_big" alt="" srcset="">
+      <img src="${book.GetPrivateImageLink()}" class="item__img_big" alt="">
       <div class="item__column">
         <div class="item__autor">${book.GetPrivateAuthors()}</div>
         <div class="item__title">${book.GetPrivateTitle()}</div>
