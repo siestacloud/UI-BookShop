@@ -1,4 +1,5 @@
 {
+  "homepage": "https://siestacloud.github.io/UI-BookShop",
   "name": "bookshop",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +8,9 @@
     "start": "http-server -p 5569 -o ./src/dist",
     "t": "tsc",
     "build": "tsc && webpack",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   "devDependencies": {
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "gh-pages": "^5.0.0",
     "http-server": "^14.1.1",
     "mini-css-extract-plugin": "^2.7.1",
     "sass": "^1.56.1",
