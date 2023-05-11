@@ -6,7 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   entry: './src/js/app.js',
   output: {
-    path: path.resolve(__dirname, './src/dist'),
+    path: path.resolve(__dirname, './build'),
     filename: 'main.js'
   },
   mode: 'production',
@@ -24,7 +24,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "./src/dist"),
+      directory: path.join(__dirname, "./build"),
     },
   },
   devtool: 'source-map',
