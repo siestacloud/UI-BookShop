@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href=" main.css">
+  <title>Book Shop</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <section class="header__row">
+        <div class="header__logo m-text-head">Bookshop</div>
+        <ul class="header__nav">
+          <li class="header__item m-text-menu"> <a href="#">books</a> </li>
+          <li class="header__item m-text-menu"> <a href="#">audiobooks</a> </li>
+          <li class="header__item m-text-menu"> <a href="#">Stationery & gifts</a></li>
+          <li class="header__item m-text-menu"> <a href="#">blog</a> </li>
+        </ul>
+        <div class="header__icons">
+          <img class="header__icon" src="./img/user.png" alt="" srcset="">
+          <img class="header__icon" src="./img/search.png" alt="" srcset="">
+          <img class="header__icon" src="./img/bag.png" alt="" srcset="">
+          <div class="header__counter ">0</div>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <div class="main__wrapper">
+
+        <section class="slider">
+          <div class="slider__images j-slider-img">
+            <div class="image n0 active" style="background-image:url(img/3.png);" data-index="0"></div>
+            <div class="image n1 " style="background-image:url(img/2.png);" data-index="1"></div>
+            <div class="image n2 " style="background-image:url(img/1.png);" data-index="2"></div>
+          </div>
+          <div class="content__submenu slider__click">
+            <div class="slider__dots j-dots"></div>
+          </div>
+          <a href="#" class="slider__link ">
+            <p>change old book on menu</p>
+          </a>
+          <a href="#" class="slider__link-sec ">
+            <p>top 100 books 2022</p>
+          </a>
+        </section>
+
+        <section class="books">
+
+          <div class="books__menu">
+            <ul>
+              <li data-index="0" class="c0   books__category active-cat">Architecture</li>
+              <li data-index="1" class="c1   books__category">Biography</li>
+              <li data-index="2" class="c2   books__category">Business</li>
+              <li data-index="3" class="c3   books__category">Crafts & Hobbies</li>
+              <li data-index="4" class="c4   books__category">Drama</li>
+              <li data-index="5" class="c5   books__category">Fiction</li>
+              <li data-index="6" class="c6   books__category">Food & Drink</li>
+              <li data-index="7" class="c7   books__category">Health & Wellbeing</li>
+              <li data-index="8" class="c8   books__category">History & Politics </li>
+              <li data-index="9" class="c9   books__category">Humor</li>
+              <li data-index="10" class="c10   books__category">Poetry</li>
+              <li data-index="11" class="c11   books__category">Psychology</li>
+              <li data-index="12" class="c12   books__category">Science</li>
+              <li data-index="13" class="c13   books__category">Technology</li>
+              <li data-index="14" class="c14   books__category">Travel & Maps </li>
+            </ul>
+          </div>
+
+          <div class="books__row">
+
+          </div>
+
+
+        </section>
+      </div>
+
+    </main>
+    <footer class="footer">
+      <button class="footer__btn">load more</button>
+      
+    </footer>
+  </div>
+  <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
