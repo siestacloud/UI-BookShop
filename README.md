@@ -4,7 +4,7 @@
  <img width=850px height=700px src="./src/dist/img/3.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">BookShopTS</h3>
+<h3 align="center">UI BookShop</h3>
 
 <div align="center">
 
@@ -35,13 +35,22 @@
 ## 🔧 Getting Started <a name = "getting_started"></a>
 
 Эти инструкции помогут вам создать копию проекта в локальном окружении для разработки и тестирования. 
-
+`
+---
 ###  Installing
 ```
-git clone  https://github.com/siestacloud/BookShopTS 
-
+git clone git@github.com:siestacloud/UI-BookShop.git
+cd UI-Modern
+```
+`npm`
+```
 npm i
 npm run build
-npm run start:dev
+npm run start
+```
+`yarn`
+```
+yarn
+yarn run start
 ```
 ---
